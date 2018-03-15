@@ -14,6 +14,7 @@ import org.encog.app.analyst.csv.segregate.SegregateTargetPercent;
 import org.encog.app.analyst.csv.shuffle.ShuffleCSV;
 import org.encog.app.analyst.wizard.AnalystWizard;
 import org.encog.engine.network.activation.ActivationLinear;
+import org.encog.engine.network.activation.ActivationSigmoid;
 import org.encog.engine.network.activation.ActivationTANH;
 import org.encog.ml.data.MLDataPair;
 import org.encog.ml.data.MLDataSet;

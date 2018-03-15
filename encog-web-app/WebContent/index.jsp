@@ -10,7 +10,9 @@
 	<form>
 		<input type="button" class="btn" value="Train" id="train" name="train"/>
 		<input type="button" class="btn" value="Evaluate" id="evaluate" name="evaluate"/>
-		<div id="plot" style="width: 100%"></div>
+		<input type="file" class="file" id="file" name="file" title="Please upload"/>
+		<div id="plotError" style="width: 100%"></div>
+		<div id="plotExperiments" style="width: 100%"></div>
 	</form>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

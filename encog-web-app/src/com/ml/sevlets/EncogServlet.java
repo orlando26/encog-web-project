@@ -55,7 +55,7 @@ public class EncogServlet extends HttpServlet {
 			List<Double> errors = MpgPrediction.trainNetwork();
 			String errorsJson = new Gson().toJson(errors);
 			out.println(errorsJson);
-		}else{
+		}else{   
 			System.out.println("Evaluate Netork...");
 			List<Evaluation> expList = evaluate();
 			String evalsJson = new Gson().toJson(expList);
