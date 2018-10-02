@@ -2,6 +2,8 @@ package com.ml.sevlets;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -76,11 +78,16 @@ public class UploadServlet extends HttpServlet {
 			// Parse the request
 			List items = upload.parseRequest(request);
 			Iterator iter = items.iterator();
+			
+			String fileName = "";
 			while (iter.hasNext()) {
 				FileItem item = (FileItem) iter.next();
 
 				if (!item.isFormField()) {
-					String fileName = new File(item.getName()).getName();
+					SimpleDateFormat sdfDate = new SimpleDateFormat("yyyyMMdd-HHmmss");//dd/MM/yyyy
+				    Date now = new Date();
+				    String strDate = sdfDate.format(now);
+					fileName = strDate + new File(item.getName()).getName();
 					String filePath = uploadFolder + File.separator + fileName;
 					File uploadedFile = new File(filePath);
 					System.out.println(filePath);
@@ -90,7 +97,7 @@ public class UploadServlet extends HttpServlet {
 			}
 
 		response.setContentType("text/html");
-		response.sendRedirect("pages/main.jsp");
+		response.sendRedirect("main.jsp?"+"file="+fileName);
 		
 		} catch (FileUploadException ex) {
 			throw new ServletException(ex);

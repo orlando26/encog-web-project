@@ -19,12 +19,16 @@
         </style>
 </head>
 <body>
-	main 
+	
+	<%
+		String fileName = request.getParameter("file");
+	%>
+	data 
 	 <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
         <script src="http://d3js.org/d3.v3.min.js"></script>
 
         <script type="text/javascript"charset="utf-8">
-            d3.text("resources/data/adult.csv", function(data) {
+            d3.text("resources/data/<%=fileName%>", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
 
                 var container = d3.select("body")
