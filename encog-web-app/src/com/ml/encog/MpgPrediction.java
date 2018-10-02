@@ -1,8 +1,6 @@
 package com.ml.encog;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +12,8 @@ import org.encog.app.analyst.csv.segregate.SegregateTargetPercent;
 import org.encog.app.analyst.csv.shuffle.ShuffleCSV;
 import org.encog.app.analyst.wizard.AnalystWizard;
 import org.encog.engine.network.activation.ActivationLinear;
-import org.encog.engine.network.activation.ActivationSigmoid;
 import org.encog.engine.network.activation.ActivationTANH;
-import org.encog.ml.data.MLDataPair;
 import org.encog.ml.data.MLDataSet;
-import org.encog.ml.data.basic.BasicMLData;
 import org.encog.neural.networks.BasicNetwork;
 import org.encog.neural.networks.layers.BasicLayer;
 import org.encog.neural.networks.training.propagation.resilient.ResilientPropagation;
@@ -26,13 +21,14 @@ import org.encog.persist.EncogDirectoryPersistence;
 import org.encog.util.arrayutil.NormalizationAction;
 import org.encog.util.csv.CSVFormat;
 import org.encog.util.simple.EncogUtility;
+import org.junit.Test;
 
 import com.ml.util.FilesPath;
 
 
 
 public class MpgPrediction {
-	
+	String a = this.toString();
 	public static void prediction(){
 		System.out.println("Shuffle file...");
 		shuffle(FilesPath.BASE_FILE);

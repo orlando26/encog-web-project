@@ -2,8 +2,8 @@ var errors = [];
 var ideal = [];
 var predicted = [];
 $(document).ready(function(){
-
-
+	plotErrors();
+	plotExperiments();
 	$('.btn').click(function(){
 		var btn = $(this).val();
 		console.log(btn);
@@ -22,7 +22,7 @@ $(document).ready(function(){
 					ideal.push(obj.ideal);
 					predicted.push(obj.predicted);
 				});
-				plotExperiments()
+				plotExperiments();
 			}
 
 		});

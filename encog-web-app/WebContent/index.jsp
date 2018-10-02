@@ -7,10 +7,11 @@
 <title>ENCOG</title>
 </head>
 <body>
-	<form>
+	<form method="post" action="UploadServlet" enctype="multipart/form-data">
 		<input type="button" class="btn" value="Train" id="train" name="train"/>
 		<input type="button" class="btn" value="Evaluate" id="evaluate" name="evaluate"/>
-		<input type="file" class="file" id="file" name="file" title="Please upload"/>
+		<input type="file" name="dataFile" id="fileChooser"/>
+		<input type="submit" value="Upload" />
 		<div id="plotError" style="width: 100%"></div>
 		<div id="plotExperiments" style="width: 100%"></div>
 	</form>

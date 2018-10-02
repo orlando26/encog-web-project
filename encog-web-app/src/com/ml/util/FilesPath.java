@@ -21,4 +21,6 @@ private static String BASE_PATH = FilesPath.class.getResource("/com/ml/data/mpg/
 	public static final String TRAINED_NETWORK_FILE = BASE_PATH + "AutoMPGTrain.eg";
 	
 	public static final String VALIDATION_RESULT = BASE_PATH + "AutoMPGValidation.csv";
+
+	public static final String UPLOADED_FILE = BASE_PATH;
 }
