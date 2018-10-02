@@ -3,7 +3,7 @@
 Web project that trains a regresion neural network to predict the 
 MPG giving the following values.
 
-![Alt text](images/data.png?raw=true "Data")
+![Alt text](images/data.PNG?raw=true "Data")
 
 
 ## Results.
