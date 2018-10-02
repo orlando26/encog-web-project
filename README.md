@@ -2,10 +2,11 @@
 
 Web project that trains a regresion neural network to predict the 
 MPG giving the following values.
+
 ![Alt text](images/data.png?raw=true "Data")
 
 
-##Results.
+## Results.
 ### Errors graph after the training using 80% of data
 ![Alt text](images/errors.png?raw=true "Errors")
 
